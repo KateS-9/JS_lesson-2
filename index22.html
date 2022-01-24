@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+</head>
+<body>
+    <script>
+        let a = prompt('Введите значение переменной а','');
+        if (a == '') {
+            alert('Вы не ввели переменную а!')
+        }
+        let b = prompt('Введите значение переменной b','');
+        if (b == '') {
+            alert('Вы не ввели переменную b!')
+        }
+        if (a == '' || b == '') {
+            result = 'Вы не ввели одну из переменных или обе переменные.';
+        }
+        else if (a.split(' ').length-1 == b.split(' ').length-1) {
+            result = 'строки равны';
+        }
+        else if (a.split(' ').length-1 != b.split(' ').length-1) {
+            result = 'строки не равны';
+        }
+        else if (!isNaN(a) && !isNaN(b)) {
+            result = ((+a + +a) == +b) ? 'значения равны' : 'значения не равны';
+        }
+        else result = ((a + a) == b) ? 'строки равны' : 'строки не равны';
+        alert(result);
+    </script>    
+</body>
+</html>

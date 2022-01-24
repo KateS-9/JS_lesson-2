@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+</head>
+<body>
+    <script>
+        let a = prompt('Введите значение переменной а (введите число)','');
+        if (!isFinite(a)) {
+            alert('То, что Вы ввели, не является числом либо является NaN, положительной или отрицательной бесконечностью.');
+        }
+        else if (a.trim() == '') {
+            alert('Вы не ввели число а!')
+        }
+        let b = prompt('Введите значение переменной b (введите число)','');
+        if (!isFinite(b)) {
+            alert('То, что Вы ввели, не является числом либо является NaN, положительной или отрицательной бесконечностью.');
+        }
+        else if (b.trim() == '') {
+            alert('Вы не ввели число b!')
+        }
+        if (a*b < 0) {
+            result = 'Корень чётной степени из отрицательного числа не существует в области вещественных чисел!';
+        }
+        else if (!isFinite(a*b) || a.trim() == '' || b.trim() == '') {
+            result = 'Вы не ввели одно из чисел (или оба числа) либо произведение a на b является NaN, положительной или отрицательной бесконечностью.';
+        }
+        else result = (Math.sqrt(a*b) < 4) ? 'Мало' : 'Много';
+        alert(result);
+    </script>
+</body>
+</html>
