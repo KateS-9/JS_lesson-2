@@ -19,13 +19,13 @@
         if (a == '' || b == '') {
             result = 'Вы не ввели одну из переменных или обе переменные.';
         }
-        else if (a.split(' ').length-1 == b.split(' ').length-1) {
+        else if ((a.trim() == '' || b.trim() == '') && (a.split(' ').length-1 + a.split(' ').length-1 == b.split(' ').length-1)) {
             result = 'строки равны';
         }
-        else if (a.split(' ').length-1 != b.split(' ').length-1) {
+        else if ((a.trim() == '' || b.trim() == '') && (a.split(' ').length-1 + a.split(' ').length-1 != b.split(' ').length-1)) {
             result = 'строки не равны';
         }
-        else if (!isNaN(a) && !isNaN(b)) {
+        else if (Number.isInteger(+a) && Number.isInteger(+b)) {
             result = ((+a + +a) == +b) ? 'значения равны' : 'значения не равны';
         }
         else result = ((a + a) == b) ? 'строки равны' : 'строки не равны';
